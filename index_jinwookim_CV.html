@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jin-Woo Kim, D.D.S., Ph.D. — Curriculum Vitae</title>
+<meta name="description" content="Jin-Woo Kim — Associate Professor of Oral & Maxillofacial Surgery, Ewha Womans University. Dental AI, MRONJ, and bone research.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --text:#16202e; --muted:#5c6675;
+  --accent1:#1f5fbf; --accent2:#8a2846;
+  --card:#f5f8fc; --border:#e4e9f1;
+  --maxw:880px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.62;font-size:16px}
+a{color:var(--accent1);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:10px 22px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.nav-inner .brand{font-weight:700;margin-right:auto}
+.nav-inner a.navlink{color:var(--muted);font-size:.84rem}
+.nav-inner a.navlink.active{color:var(--accent1);font-weight:600}
+.lang-toggle button{border:1px solid var(--border);background:#fff;
+  padding:3px 9px;border-radius:6px;cursor:pointer;font-size:.8rem;color:var(--muted)}
+.lang-toggle button.on{background:var(--accent1);color:#fff;border-color:var(--accent1)}
+.btn{display:inline-block;background:var(--accent1);color:#fff;padding:7px 15px;
+  border-radius:8px;font-size:.85rem}
+.btn:hover{text-decoration:none;opacity:.92}
+.btn.alt{background:var(--accent2)}
+
+section{padding:50px 0 8px;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+h1{font-size:2.5rem;margin:.15em 0;letter-spacing:-.01em}
+h2{font-size:1.32rem;color:var(--accent2);margin:0 0 18px}
+h3{font-size:1rem;margin:0 0 6px}
+.muted{color:var(--muted)}
+.tagline{font-size:1.12rem;color:var(--muted);max-width:660px;margin:.4em 0}
+.contact{font-size:.9rem;color:var(--muted);margin-top:12px;line-height:1.9}
+.hero-cta{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:6px 0 22px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:15px;text-align:center}
+.stat .n{font-size:1.7rem;font-weight:700;color:var(--accent1)}
+.stat .l{font-size:.76rem;color:var(--muted)}
+
+.item{padding:13px 0;border-bottom:1px solid var(--border)}
+.item:last-child{border-bottom:none}
+.badge{display:inline-block;background:var(--accent1);color:#fff;font-size:.68rem;
+  padding:2px 8px;border-radius:20px;margin-right:6px;white-space:nowrap}
+.badge.alt{background:var(--accent2)}
+.badge.ai{background:#0f7a5a}
+.yr{font-weight:700;color:var(--accent2);margin-right:8px}
+.pub-title{font-weight:600}
+.pub-meta{font-size:.83rem;color:var(--muted)}
+.pub-auth{font-size:.83rem;color:var(--muted)}
+.pub-auth b{color:var(--text)}
+
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.table-scroll{overflow-x:auto}
+
+.two-col{columns:2;column-gap:34px}
+.two-col .item{break-inside:avoid}
+.skill-group{margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:4px 11px;font-size:.8rem}
+
+footer{padding:40px 0;color:var(--muted);font-size:.82rem;text-align:center}
+
+[data-ko]{display:none}
+html.ko [data-en]{display:none}
+html.ko [data-ko]{display:inline}
+html.ko [data-ko].block{display:block}
+
+@media(max-width:640px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .two-col{columns:1}
+  h1{font-size:1.9rem}
+  .nav-inner .navlink{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="brand">Jin-Woo Kim</span>
+    <a class="navlink" href="#about">About</a>
+    <a class="navlink" href="#education">Education</a>
+    <a class="navlink" href="#appointments">Appointments</a>
+    <a class="navlink" href="#publications">Publications</a>
+    <a class="navlink" href="#grants">Grants</a>
+    <a class="navlink" href="#patents">Patents</a>
+    <span class="lang-toggle">
+      <button id="btn-en" class="on" onclick="setLang('en')">EN</button>
+      <button id="btn-ko" onclick="setLang('ko')">한</button>
+    </span>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section id="hero">
+  <h1>Jin-Woo Kim, D.D.S., Ph.D.</h1>
+  <p class="tagline">
+    <span data-en>Associate Professor of Oral &amp; Maxillofacial Surgery, working at the interface of dental AI, bone biology, and MRONJ research.</span>
+    <span data-ko>치과 AI·골대사·MRONJ 연구를 아우르는 구강악안면외과 부교수.</span>
+  </p>
+  <p class="muted" style="margin-top:2px">
+    <span data-en>College of Medicine, Ewha Womans University · Director, Ewha Dental AI·Bio Global Innovation Institute</span>
+    <span data-ko>이화여자대학교 의과대학 · 이화 치의학 AI·바이오 글로벌혁신연구소 초대 연구소장</span>
+  </p>
+  <div class="contact">
+    📧 jwkim84@ewha.ac.kr &nbsp;·&nbsp; 🆔 ORCID 0000-0002-1672-5730<br>
+    📍 <span data-en>Mokdong Hospital, Yangcheon-gu, Seoul, Republic of Korea</span><span data-ko>서울특별시 양천구 이화여대부속 목동병원</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn" href="#publications"><span data-en>Publications</span><span data-ko>논문</span></a>
+    <a class="btn alt" href="https://scholar.google.com/citations?user=" target="_blank" rel="noopener">Google Scholar</a>
+    <a class="btn" style="background:#333" href="https://orcid.org/0000-0002-1672-5730" target="_blank" rel="noopener">ORCID</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    <span data-en>Oral and maxillofacial surgeon and researcher whose work bridges clinical surgery, bone metabolism, and artificial intelligence. Board-certified specialist (Oral &amp; Maxillofacial Surgery; Integrated Dentistry) and Fellow of the International Board for the Certification of Specialists in OMS (FIBCSOMS). Research centers on medication-related osteonecrosis of the jaw (MRONJ), multi-omics diagnostics, and deep-learning models for dental and craniofacial imaging.</span>
+    <span data-ko class="block">임상 수술·골대사·인공지능을 잇는 구강악안면외과 전문의이자 연구자. 구강악안면외과 및 통합치의학과 전문의이며 국제구강악안면외과 전문의(FIBCSOMS). 약물관련 턱뼈괴사(MRONJ), 멀티오믹스 진단, 치과·두개안면 영상 딥러닝 모델을 중심으로 연구한다.</span>
+  </p>
+  <p class="pub-meta">
+    <span data-en><b>Focus areas:</b> MRONJ &amp; bone metabolism · dental &amp; craniofacial AI · multi-omics precision diagnostics · 3D-printed patient-specific devices · cleft &amp; airway.</span>
+    <span data-ko class="block"><b>중점 분야:</b> MRONJ·골대사 · 치과/두개안면 AI · 멀티오믹스 정밀진단 · 3D 프린팅 맞춤형 의료기기 · 구순구개열·기도.</span>
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="item"><span class="yr">2012–2015</span><b>Ph.D. in Dentistry</b> — Yonsei University</div>
+  <div class="item"><span class="yr">2009–2011</span><b>M.S.D. in Dentistry</b> — Yonsei University</div>
+  <div class="item"><span class="yr">2002–2008</span><b>D.D.S. in Dentistry</b> — Yonsei University</div>
+  <h3 style="margin-top:20px">
+    <span data-en>Certification</span><span data-ko>자격</span></h3>
+  <p class="pub-meta">
+    <span data-en>Board-certified specialist — Oral &amp; Maxillofacial Surgery; Integrated Dentistry · FIBCSOMS (Fellow, International Board for the Certification of Specialists in OMS)</span>
+    <span data-ko class="block">구강악안면외과 전문의 · 통합치의학과 전문의 · FIBCSOMS (국제구강악안면외과 전문의)</span>
+  </p>
+</section>
+
+<!-- APPOINTMENTS -->
+<section id="appointments">
+  <h2><span data-en>Academic Appointments</span><span data-ko>주요 경력</span></h2>
+  <div class="item"><span class="yr">2021–</span>
+    <span data-en>Associate Professor, Oral &amp; Maxillofacial Surgery, College of Medicine, Ewha Womans University</span>
+    <span data-ko>이화여자대학교 의과대학 구강악안면외과 부교수</span></div>
+  <div class="item"><span class="yr">2024–</span>
+    <span data-en>Founding Director, Ewha Dental AI·Bio Global Innovation Institute</span>
+    <span data-ko>이화 치의학 AI·바이오 글로벌혁신연구소 초대 연구소장</span></div>
+  <div class="item"><span class="yr">2023</span>
+    <span data-en>Visiting Scholar, Stanford University — Craniofacial Center &amp; Sleep Center</span>
+    <span data-ko>스탠포드대학 Craniofacial Center &amp; Sleep Center 방문학자</span></div>
+  <div class="item"><span class="yr">2014–2021</span>
+    <span data-en>Assistant Professor, Oral &amp; Maxillofacial Surgery, Ewha Womans University</span>
+    <span data-ko>이화여자대학교 의과대학 구강악안면외과 조교수</span></div>
+  <div class="item"><span class="yr">2014 / 2013</span>
+    <span data-en>Visiting Scholar — TU Munich &amp; Tokyo Medical and Dental University, OMS</span>
+    <span data-ko>뮌헨공대 및 동경의과치과대학 구강악안면외과 방문학자</span></div>
+  <h3 style="margin-top:20px"><span data-en>Society &amp; Editorial</span><span data-ko>학회 · 편집 활동</span></h3>
+  <p class="pub-meta">
+    <span data-en>Director, Korean Assoc. of Oral &amp; Maxillofacial Surgeons (KAOMS) · Legislative Director, KAOMRS · Editor, Maxillofacial Plastic and Reconstructive Surgery (MPRS) · Next-generation member (Y-KAST), Korean Academy of Science and Technology · Lead editor, 2025 multi-society MRONJ clinical position statement.</span>
+    <span data-ko class="block">대한구강악안면외과학회(KAOMS) 이사 · 대한악안면성형재건외과학회(KAOMRS) 법제이사 · MPRS Editor · 한국과학기술한림원 차세대회원(Y-KAST) · 2025년 5개 학회 공동 MRONJ 임상진료 입장문 책임편집자.</span>
+  </p>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Selected Publications</h2>
+  <div class="stats">
+    <div class="stat"><div class="n">100+</div><div class="l" data-en>Total papers</div><div class="l" data-ko>총 논문</div></div>
+    <div class="stat"><div class="n">60+</div><div class="l" data-en>SCI(E)</div><div class="l" data-ko>SCI(E)</div></div>
+    <div class="stat"><div class="n">30+</div><div class="l" data-en>First / corresponding</div><div class="l" data-ko>1저자·교신</div></div>
+    <div class="stat"><div class="n">3×</div><div class="l" data-en>ECTS Award</div><div class="l" data-ko>ECTS 수상</div></div>
+  </div>
+  <p class="pub-meta" style="margin-bottom:14px">
+    <span data-en>A curated selection of first-author, corresponding-author, and AI-focused work is shown below. Each links to Google Scholar. See the full list of 100+ publications on Scholar.</span>
+    <span data-ko class="block">아래는 1저자·교신저자 및 AI 중심의 대표 논문입니다. 각 항목은 Google Scholar로 연결됩니다. 전체 100편 이상은 Scholar에서 확인하세요.</span>
+  </p>
+  <div id="publist"></div>
+  <p class="pub-meta" style="margin-top:16px">
+    <a class="btn alt" href="https://scholar.google.com/citations?user=" target="_blank" rel="noopener">
+      <span data-en>View all publications on Google Scholar →</span><span data-ko>Google Scholar에서 전체 보기 →</span>
+    </a>
+  </p>
+</section>
+
+<!-- GRANTS -->
+<section id="grants">
+  <h2><span data-en>Research Grants (as PI)</span><span data-ko>연구비 (책임연구자)</span></h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr>
+      <th><span data-en>Project</span><span data-ko>과제</span></th>
+      <th><span data-en>Agency</span><span data-ko>기관</span></th>
+      <th>Period</th><th>Budget</th>
+    </tr></thead>
+    <tbody id="grantbody"></tbody>
+  </table>
+  </div>
+  <p class="pub-meta" style="margin-top:8px">
+    <span data-en>Selected; multiple additional PI and Co-PI grants. Budgets approximate (USD).</span>
+    <span data-ko class="block">일부 발췌이며, 이 외 다수의 책임·공동연구 과제가 있습니다. 예산은 USD 환산 근사치.</span>
+  </p>
+</section>
+
+<!-- PATENTS & AWARDS -->
+<section id="patents">
+  <h2><span data-en>Patents &amp; Awards</span><span data-ko>특허 · 수상</span></h2>
+  <h3><span data-en>Selected Patents</span><span data-ko>대표 특허</span></h3>
+  <div class="two-col">
+    <div class="item">Animal model for the study of bisphosphonate-related osteonecrosis of the jaw <span class="muted">(reg. 2018)</span></div>
+    <div class="item">Method of diagnosis for bisphosphonate-related osteonecrosis of the jaw <span class="muted">(reg. 2018)</span></div>
+    <div class="item">Automated detection of cephalometric landmarks using Bayesian CNNs <span class="muted">(PCT, 2020)</span></div>
+    <div class="item">Fully automatic 3D cephalometry system using image processing &amp; CNN <span class="muted">(2019)</span></div>
+    <div class="item">AI-based diagnosis of temporomandibular disorder in MRI images <span class="muted">(2020)</span></div>
+    <div class="item">Tooth-referenced osteotomy guide <span class="muted">(2022)</span></div>
+  </div>
+  <h3 style="margin-top:20px"><span data-en>Selected Awards</span><span data-ko>대표 수상</span></h3>
+  <div class="two-col">
+    <div class="item"><span class="yr">2020·22·24</span>ECTS West-meets-East Award (×3)</div>
+    <div class="item"><span class="yr">2026</span><span data-en>Ewha Haenglim Distinguished Researcher Award</span><span data-ko>이화행림우수연구자상</span></div>
+    <div class="item"><span class="yr">2025</span><span data-en>Leading Researcher Award, KAOMS</span><span data-ko>대한구강악안면외과학회 선도연구자상</span></div>
+    <div class="item"><span class="yr">2024</span>Young Investigator Award, KSBMR</div>
+    <div class="item"><span class="yr">2025</span>Best Oral Presentation, KAMPRS</div>
+    <div class="item"><span class="yr">2023</span>KDA Academic Seminar Grand Prize</div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2><span data-en>Research Methods</span><span data-ko>연구 방법</span></h2>
+  <div class="skill-group">
+    <h3 data-en>Clinical &amp; Experimental</h3><h3 data-ko>임상 · 실험</h3>
+    <div class="chips">
+      <span class="chip">MRONJ surgery &amp; management</span><span class="chip">Bone metabolism / PTH</span>
+      <span class="chip">Animal models (beagle, dog, rabbit)</span><span class="chip">3D-printed devices</span>
+      <span class="chip">Cleft &amp; airway (SOAP)</span><span class="chip">Multi-omics / spatial</span>
+    </div>
+  </div>
+  <div class="skill-group">
+    <h3 data-en>AI &amp; Computational</h3><h3 data-ko>AI · 계산</h3>
+    <div class="chips">
+      <span class="chip">Deep learning (CNN, segmentation)</span><span class="chip">Explainable AI</span>
+      <span class="chip">Cephalometric landmark detection</span><span class="chip">Panoramic / MRI diagnosis</span>
+      <span class="chip">ML risk prediction</span><span class="chip">Bayesian CNN</span>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <span data-en>Jin-Woo Kim, D.D.S., Ph.D. · Curriculum Vitae · Updated 2026</span>
+  <span data-ko>김진우 · Curriculum Vitae · 2026 업데이트</span>
+</footer>
+
+<script>
+const PUBS = [
+  {y:"2025",t:"Time since last intravenous bisphosphonate and risk of osteonecrosis of the jaw in osteoporotic patients",j:"Nature Communications",a:"J-H Park, S H Kong, …, <b>Jin-Woo Kim</b>",tag:"Corresponding",cls:"alt"},
+  {y:"2025",t:"Explainable Deep-Learning Approaches for Risk Screening of Periodontitis",j:"Journal of Dental Research",a:"B Suh, H Yu, J-K Cha, J Choi, <b>J-W Kim</b>",tag:"Corresponding · AI",cls:"ai"},
+  {y:"2025",t:"Medication-related osteonecrosis of the jaw: an evidence-based 2025 position statement from a Korean multidisciplinary task force",j:"J Korean Assoc Oral Maxillofac Surg",a:"<b>Jin-Woo Kim</b>, et al.",tag:"First author"},
+  {y:"2024",t:"Enhancing Bone Regeneration and Osseointegration using rhPTH (1-34) and Dimeric R25CPTH (1-34) in an Osteoporotic Beagle Model",j:"eLife",a:"J-O Shin, J-B Lee, S Lee, <b>Jin-Woo Kim</b>",tag:"Corresponding",cls:"alt"},
+  {y:"2024",t:"AI-based dental caries and tooth number detection in intraoral photos: Model development and performance evaluation",j:"Journal of Dentistry",a:"K Yoon, H-M Jeong, <b>Jin-Woo Kim</b>, J-H Park, J Choi",tag:"Corresponding · AI",cls:"ai"},
+  {y:"2024",t:"Multi-class segmentation of temporomandibular joint using ensemble deep learning",j:"Scientific Reports",a:"K Yoon, J-Y Kim, …, <b>Jin-Woo Kim</b>, J Choi",tag:"Corresponding · AI",cls:"ai"},
+  {y:"2023",t:"Explainable deep learning-based clinical decision support engine for MRI-based automated diagnosis of temporomandibular joint anterior disk displacement",j:"Computer Methods and Programs in Biomedicine",a:"K Yoon, …, <b>Jin-Woo Kim</b>, J Choi",tag:"Corresponding · AI",cls:"ai"},
+  {y:"2023",t:"Interpretable Deep-Learning Approaches for Osteoporosis Risk Screening and Individualized Feature Analysis Using Large Population-Based Data",j:"Journal of Medical Internet Research",a:"B Suh, …, <b>Jin-Woo Kim</b>, J Choi",tag:"Corresponding · AI",cls:"ai"},
+  {y:"2021",t:"Medication Related Osteonecrosis of the Jaw: 2021 Position Statement of the Korean Society for Bone and Mineral Research and the Korean Association of Oral and Maxillofacial Surgeons",j:"Journal of Bone Metabolism",a:"<b>Jin-Woo Kim</b>, et al.",tag:"First author"},
+  {y:"2021",t:"Machine learning approaches for predicting bisphosphonate-related osteonecrosis in women with osteoporosis using VEGFA gene polymorphisms",j:"Journal of Personalized Medicine",a:"<b>Jin-Woo Kim</b>, J Yee, …, H-S Gwak",tag:"First author · AI",cls:"ai"},
+  {y:"2020",t:"Automated Skeletal Classification with Lateral Cephalometry Based on Artificial Intelligence",j:"Journal of Dental Research",a:"H J Yu, S R Cho, …, <b>Jin-Woo Kim</b>, J Choi",tag:"Corresponding · AI · Top journal",cls:"ai"},
+  {y:"2019",t:"Effects of pH alteration on the pathogenesis of medication-related osteonecrosis of the jaw",j:"Bone",a:"<b>Jin-Woo Kim</b>, A M D Alfafara, …, S-J Kim",tag:"First author"},
+  {y:"2016",t:"Biomarker for Bisphosphonate-related Osteonecrosis of Jaw",j:"Clinical Implant Dentistry and Related Research",a:"<b>Jin-Woo Kim</b>, I-H Cha, S-J Kim, M-R Kim",tag:"First author"},
+  {y:"2015",t:"Animal model for Medication-related Osteonecrosis of the Jaw with Precedent Metabolic Bone Disease",j:"Bone",a:"<b>Jin-Woo Kim</b>, et al.",tag:"First author"},
+];
+const GRANTS = [
+  {p:"Biomarkers predicting occurrence and prognosis of osteonecrosis: multicenter multi-omics analysis",ag:"KHIDI",per:"2025–2027",b:"~$580K"},
+  {p:"Spatial investigation of osteo-microenvironment for MRONJ and precision diagnostics",ag:"NRF",per:"2024–2029",b:"~$909K"},
+  {p:"High-quality dataset & AI model for MRONJ, caries, pulp, periodontitis, oral cancer",ag:"KHIDI",per:"2023–2026",b:"~$1.37M"},
+  {p:"Multi-omics precision diagnostics & therapeutics for MRONJ",ag:"KHIDI",per:"2022–2025",b:"~$1.21M"},
+  {p:"3D-printing patient-specific device & XR for bone defect fracture treatment",ag:"KEIT",per:"2020–2025",b:"~$5.02M"},
+  {p:"Korean MRONJ cohort setup: biomarker validation & whole-genome sequencing",ag:"NRF",per:"2020–2024",b:"~$617K"},
+];
+function scholar(t){return "https://scholar.google.com/scholar?q="+encodeURIComponent(t);}
+document.getElementById('publist').innerHTML = PUBS.map(p=>`
+  <div class="item">
+    <span class="badge ${p.cls||''}">${p.tag}</span>
+    <a class="pub-title" href="${scholar(p.t)}" target="_blank" rel="noopener">${p.t}</a>
+    <div class="pub-auth">${p.a}</div>
+    <div class="pub-meta"><i>${p.j}</i> · ${p.y}</div>
+  </div>`).join('');
+document.getElementById('grantbody').innerHTML = GRANTS.map(g=>`
+  <tr><td>${g.p}</td><td>${g.ag}</td><td>${g.per}</td><td>${g.b}</td></tr>`).join('');
+
+function setLang(l){
+  document.documentElement.classList.toggle('ko', l==='ko');
+  document.documentElement.lang=l;
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-ko').classList.toggle('on', l==='ko');
+}
+const links=[...document.querySelectorAll('.navlink')];
+const map=links.map(a=>({a,sec:document.querySelector(a.getAttribute('href'))})).filter(x=>x.sec);
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  map.forEach(m=>m.a.classList.toggle('active', m.sec===e.target));}});},
+  {rootMargin:'-40% 0px -55% 0px'});
+map.forEach(m=>io.observe(m.sec));
+</script>
+</body>
+</html>
